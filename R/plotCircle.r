@@ -1,9 +1,9 @@
 ####################################################################
-## Author: Gro Nilsen, Knut Liestøl and Ole Christian Lingjærde.
+## Author: Gro Nilsen, Knut Liestï¿½l and Ole Christian Lingjï¿½rde.
 ## Maintainer: Gro Nilsen <gronilse@ifi.uio.no>
 ## License: Artistic 2.0
 ## Part of the copynumber package
-## Reference: Nilsen and Liestøl et al. (2012), BMC Genomics
+## Reference: Nilsen and Liestï¿½l et al. (2012), BMC Genomics
 ####################################################################
 
 #Function that plots the frequency of deletions and amplifications given a threshold on the genome represented by a circle. Can also add arc to represent connections between different 
@@ -79,7 +79,7 @@ plotCircle <- function(segments,thres.gain,thres.loss=-thres.gain,pos.unit="bp",
     #Check if we are within chromosome or in the delta-region added at the end of each chrom
     if(gridpts[i] <= (chr.stop.pos[grid.chr]-delta)){
       band = which(cyto.end >= gridpts[i])[1]
-      c0[i] = switch(cyto.stain[band],
+      c0[i] = switch(as.character(cyto.stain[band]),
   	               "gneg" = "white",
   	               "gpos100" = "black",
     	             "gpos75" = "gray25",
